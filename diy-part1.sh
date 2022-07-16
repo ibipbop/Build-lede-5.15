@@ -10,6 +10,15 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
+sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
+
+sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
+
+git clone https://github.com/fw876/helloworld.git package/ssr
+git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+
+
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
