@@ -16,13 +16,9 @@ sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makef
 #sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
-# git clone https://github.com/fw876/helloworld.git package/ssr
 git clone https://github.com/firker/diy-ziyong.git package/diy-ziyong
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
-
-
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
