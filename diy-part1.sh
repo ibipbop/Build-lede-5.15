@@ -23,3 +23,4 @@ git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git jerryk https://github.com/jerrykuku/openwrt-package' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
