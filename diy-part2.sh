@@ -13,13 +13,14 @@
 sed -i '/DTS_DIR:=$(LINUX_DIR)/a\BUILD_DATE_PREFIX := $(shell date +'%F')' ./include/image.mk
 sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(BUILD_DATE_PREFIX)-/g' ./include/image.mk
 
+sed -i 's/bootstrap/argon-18.06/g' ./feeds/luci/collections/luci/Makefile
+
 curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > ./package/openwrt-mos/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
 
 rm -rf ./feeds/luci/luci-theme-argon
 rm -rf ./feeds/packages/net/adguardhome
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/mosdns
-rm -rf ./package/openwrt-passwall/v2ray-geodata
 rm -rf ./package/ssr/v2ray-geodata
 
 
