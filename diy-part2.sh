@@ -15,7 +15,7 @@ sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(BUILD_DATE_PREFIX)-/g' ./include/image.mk
 
 sed -i 's/bootstrap/argon-18.06/g' ./feeds/luci/collections/luci/Makefile
 
-curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > ./package/openwrt-mos/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
+curl -fsSL https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > ./feeds/mosdns/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
 
 rm -rf ./feeds/luci/luci-theme-argon
 rm -rf ./feeds/packages/net/adguardhome
