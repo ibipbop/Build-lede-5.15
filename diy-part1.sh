@@ -16,11 +16,11 @@ sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Make
 #sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
-git clone https://github.com/firker/diy-ziyong.git package/diy-ziyong
-git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
+
 # git clone https://github.com/kiddin9/openwrt-bypass.git package/openwrt-bypass
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git jerryk https://github.com/jerrykuku/openwrt-package' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git diy https://github.com/firker/diy-ziyong' >>feeds.conf.default
+echo 'src-git mosdns https://github.com/QiuSimons/openwrt-mos' >>feeds.conf.default
